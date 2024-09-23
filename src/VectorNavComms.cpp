@@ -38,7 +38,7 @@ void comms::VectorNavDriver::disconnect()
 }
 
 
-// Calback handler for recieving new packets
+// Callback handler for recieving new packets
 void comms::VectorNavDriver::_ascii_or_binary_messaged_received(void* userData, Packet& p, size_t index)
 {
     if (p.type() == vn::protocol::uart::Packet::TYPE_ASCII && p.determineAsciiAsyncType() == vn::protocol::uart::AsciiAsync::VNYPR) {

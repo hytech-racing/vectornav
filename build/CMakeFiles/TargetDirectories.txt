@@ -1,3 +1,0 @@
-/Users/krishkittur/Documents/hytech_vectornav_driver/build/CMakeFiles/vectornav_driver.dir
-/Users/krishkittur/Documents/hytech_vectornav_driver/build/CMakeFiles/edit_cache.dir
-/Users/krishkittur/Documents/hytech_vectornav_driver/build/CMakeFiles/rebuild_cache.dir

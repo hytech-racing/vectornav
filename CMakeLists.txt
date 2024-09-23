@@ -1,14 +1,14 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.14)
 
 project(VectorNavDriver VERSION 1.0)
 
-set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
+find_package(cmake_macros)
+include(create_package)
+include(easy_find_packages)
 
-include_directories(${CMAKE_SOURCE_DIR}/include)
-include_directories(${CMAKE_SOURCE_DIR}/libs/vn_driver_lib/cpp/include)
+easy_find_packages(vectornav_driver "vectornav")
 
-add_executable(vectornav_driver src/main.cpp src/VectorNavComms.cpp)
+add_executable(vectornav_driver src/main.cpp)
 
-target_link_libraries(vectornav_driver ${CMAKE_SOURCE_DIR}/libs/vn_driver_lib/cpp/build/liblibvncxx.a)
+target_link_libraries(vectornav_driver cc::vectornav)
 
